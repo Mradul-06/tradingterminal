@@ -1,0 +1,28 @@
+.profile-list-item{
+    display: flex;
+    height: 20px;
+    margin-top: 12px;
+}
+
+.profile-question {
+    width: 100px;
+}
+
+.profile-question-fund {
+    width: 200px;
+}
+.profile-header{
+    font-size: 12px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.profile-personal-div{
+    margin-left: 24px;
+    margin-top: 32px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    width: 40%;
+    padding: 4px;
+}

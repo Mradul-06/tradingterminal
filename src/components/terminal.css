@@ -1,0 +1,108 @@
+
+.mainContainer{
+    display: flex;
+}
+
+.chartContainer {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.terminalHeader{
+    font-size: 24px;
+    margin: 12px 0;
+    align-items: stretch;
+    display: flex;
+}
+
+.leftSideUI{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 8px;
+    padding: 8px;
+}
+
+.leftSideOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.rightSideUI{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin-top: 12px;
+    padding: 12px 24px;
+}
+
+.terminal-text{
+    font-size: 12px;
+}
+
+.card{
+    background-color: whitesmoke;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px;
+}
+.terminal-tradeCta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.terminal-input{
+    margin: 12px 0;
+    height: 24px;
+    width: 100%;
+}
+
+.terminal-button {
+    border: none;
+    color: black;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #313eeb;
+    border-radius: 8px;
+  }
+  
+.terminal-button:hover {
+    background-color: #313eeb;
+    color: white;
+}
+
+.buy{
+    border-color: green;
+    color: green;
+    width: 50%;
+}
+
+.buy:hover{
+    background-color: green;
+}
+
+.sell{
+    border-color: red;
+    color: red;
+    width: 50%;
+}
+
+.sell:hover{
+    background-color: red;
+}
