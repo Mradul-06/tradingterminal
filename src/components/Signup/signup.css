@@ -1,0 +1,21 @@
+.main-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redirect-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    height: 24px;
+    width: 300px;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+}
+.hr{
+    margin: 0px;
+}

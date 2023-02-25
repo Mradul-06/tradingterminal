@@ -1,22 +1,37 @@
 import React from "react";
 import Form from "../form"
 import axios from "axios";
-
+import { Link, redirect, useNavigate } from "react-router-dom";
+import './login.css';
 const Login = () => {
   // axios.get("http://localhost:8080/fetch").then((resp) => console.log(resp));
 
-  const callLoginApi = (username, password) => {
+  const navigate = useNavigate()
+  const callLoginApi = (username, password,user_id) => {
     axios
-      .get("http://localhost:8080/verify", {
-        user_id: username,
-        user_pass: password,
+      .post("http://127.0.0.1:5000/Login", {
+        'username': username,
+        'password': password,
+        'user_id':user_id
       })
-      .then((resp) => console.log(resp.data));
+      .then((res) => redirectToProfile(res.data));
   };
 
+  const redirectToProfile = (res) => {
+    console.log(res)
+    if(res === true){
+      console.log("in condition")
+      redirect('/');
+      setTimeout(() => {
+        console.log("setTimeout executed")
+        navigate('/home')
+      }, 1000)
+    }
+  }
   return (
-    <div>
-      <Form req={"login"} apiCallBack={callLoginApi} />
+    <div className="main-page">
+      <Form submitLabel={"Login"} apiCallBack={callLoginApi} />
+      <Link to='/Signup'><div className="redirect-button">Create an Account</div></Link>
     </div>
   );
 };

@@ -1,39 +1,41 @@
 body{
-    margin:0ch;
+    margin:0px;
 }
 a{
-    margin:10px;
     text-decoration: none;
+    color: white;
 }
 a :hover{
     color:antiquewhite;
+    text-decoration: none;
+    
 }
-.navbar{
+.Navbarnav-bar{
     display:flex;
     background-color:black;
 }
 
-.nav{
+.Navbarnav{
     display:flex;
     justify-content:flex-start;
     width: 80%;
-    margin:auto;
+    margin:10px;
     padding:10px;
 
 }
-.nav-item{
-    margin-left:8px;
+.Navbarnav-Item{
+    margin-left:12px;
     color:aliceblue;
 }
-.nav-link{
+.Navbarnav-Link{
     text-decoration:none;
     
 }
-.active{
+.Navbaractive{
     color:antiquewhite;
 }
 
-.head{
+.Navbarhead{
     display:flex;
     color:aliceblue;
     font-family: sans-serif;
@@ -44,7 +46,7 @@ a :hover{
     border-right: 1px solid white;
     border-radius: 2rem;
 }
-.btn{
+.Navbarbtn{
     display: flex;
     align-self: flex-end;
     color:green;
@@ -54,7 +56,7 @@ a :hover{
     font-weight:bold;
     font-size: large;
 }
-.nav-right{
+.Navbarnav-right{
     display: flex;
     margin:15px;
     align-items:center;

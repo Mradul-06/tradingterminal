@@ -1,0 +1,37 @@
+
+.form-container{
+    display: flex;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+.input-container{
+    display: flex;
+    margin: 0 0 8px 0;
+}
+.button-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+.label-container{
+    min-width: 80px;
+}
+.button{
+    width: 60px;
+    cursor: pointer;
+    border: 1px solid red;
+    padding: 4px;
+    text-align: center;
+}
+.heading-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 2px;
+}

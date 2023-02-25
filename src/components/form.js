@@ -1,20 +1,42 @@
 import React, { useState } from "react";
 // import axios from "axios";
+import './form.css'
 
-const Form = ({ req, apiCallBack }) => {
+const Form = ({ submitLabel, apiCallBack }) => {
   const [username, setUser] = useState("");
   const [password, setPass] = useState("");
+  const [user_id,setUserid] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    apiCallBack(username, password);
+    apiCallBack(username, password,user_id);
   };
 
-  return (
-    <div>
+  return (<>
+    <div className="heading-container"><h1>Trading Terminal</h1></div>
+    <div className="main-div">
+       
+        
+     <div className="form-container">
       <form>
+      <div className="input-container">
+        <div className="label-container">
+          User-ID
+        </div>
+          <input
+            type="text"
+            name="userid"
+            value={user_id}
+            required
+            onChange={(e) => {
+              setUserid(e.target.value);
+            }}
+          />
+        </div>
         <div className="input-container">
-          <label>Username </label>
+        <div className="label-container">
+          Username
+        </div>
           <input
             type="text"
             name="uname"
@@ -26,7 +48,9 @@ const Form = ({ req, apiCallBack }) => {
           />
         </div>
         <div className="input-container">
-          <label>Password </label>
+        <div className="label-container">
+          Password
+        </div>
           <input
             type="password"
             name="pass"
@@ -37,11 +61,15 @@ const Form = ({ req, apiCallBack }) => {
             }}
           />
         </div>
-        <div className="button-container">
-          <input type="submit" onClick={handleSubmit} />
+        <div className="button-container" onClick={handleSubmit}>
+            <span className="button">
+                 {submitLabel}
+            </span>
         </div>
       </form>
     </div>
+    </div>
+    </>
   );
 };
 

@@ -6,12 +6,15 @@ import dayjs from 'dayjs'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
 import {createChart} from 'lightweight-charts'
+import _ from 'lodash'
 import './terminal.css'
+import Table from 'react-bootstrap/Table';
 
 function Terminal() {
 
     const [instrument, setInstrument] = useState("NSE:SBIN-EQ")
     const [qty, setQty] = useState(0)
+    const [backTestData, setBackTestData] = useState({});
 
     const renderChart = (candlesData) => {
       const chartContainer = document.getElementsByClassName('chartContainer')[0];
@@ -67,6 +70,22 @@ function Terminal() {
       });
     }
 
+    const backTest = () => {
+      const url="http://127.0.0.1:5000/MovingAverageStrategy";
+      
+      const date = dayjs();
+      dayjs.extend(timezone);
+      dayjs.extend(utc);
+      const endTime = date.unix();
+      const startTime = date.subtract(1, 'week').unix();
+      const periodicity = 5;
+
+      axios.post(url,{"sendInstrument": instrument, "startTime" : startTime, "endTime" : endTime, "periodicity" : periodicity}).then((response) => {
+        setBackTestData(response.data)
+      })
+
+    }
+
 
   const getLeftSideUI = () => {
     return (
@@ -84,13 +103,49 @@ function Terminal() {
       </select>
 
      <div className="terminal-button" onClick={getCandlesData}>Generate Chart</div>
+     <div className="terminal-button" onClick={backTest}>Backtest</div>
      </div>
 
     <div className="chartContainer"></div>
+
+    {getBackTestTable()}
     </div>
     )
   }
 
+  const getBackTestTable = () => {
+    console.log(backTestData);
+
+    if(_.isEmpty(backTestData)){
+      return;
+    }
+
+
+    const {columns, data} = backTestData;
+
+    return(
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+          {columns.map((label) => {
+            return (<th key={label}>{label}</th>)
+          })}
+          </tr>
+         
+        </thead>
+        <tbody>
+          {data.map((row) => {
+            return(<tr>
+              {row.map((entry) => {
+                return(<td>{entry}</td>)
+              })}
+            </tr>)
+          })}
+        </tbody>
+      </Table>
+    )
+
+  }
   const getRightSideUI = () => {
     return (
     <div className='rightSideUI'>
@@ -109,6 +164,8 @@ function Terminal() {
      </div>
     )
   }
+
+
 
   return (
     <>
