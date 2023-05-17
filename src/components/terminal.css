@@ -1,109 +1,51 @@
-
-.mainContainer{
-    display: flex;
+.mainComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
+.terminalHeader {
+  padding: 12px;
+}
+.leftComponent {
+  margin-left: 12px;
 
+  /* width: 70%; */
+}
+.rightComponent {
+  width: 30%;
+}
 .chartContainer {
-    border: 1px solid black;
-    border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 0px 0px 15px 15px;
 }
-
-.terminalHeader{
-    font-size: 24px;
-    margin: 12px 0;
-    align-items: stretch;
-    display: flex;
+.listItem {
+  cursor: pointer;
 }
-
-.leftSideUI{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 8px;
-    padding: 8px;
+.chartHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid brown;
+  border-radius: 15px 15px 0px 0px;
 }
-
-.leftSideOptions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 8px;
+.instrumentNameHeader {
+  font-weight: bolder;
+  margin-left: 50px;
 }
-
-.rightSideUI{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    margin-top: 12px;
-    padding: 12px 24px;
+.orderbookContainer {
+  margin-top: 20px;
 }
-
-.terminal-text{
-    font-size: 12px;
+.orderCard {
+  display: flex;
+  flex-direction: column;
 }
-
-.card{
-    background-color: whitesmoke;
-    height: fit-content;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 4px;
+.btn-cont {
+  width: 50%;
 }
-.terminal-tradeCta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.terminal-input{
-    margin: 12px 0;
-    height: 24px;
-    width: 100%;
-}
-
-.terminal-button {
-    border: none;
-    color: black;
-    padding: 4px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border: 2px solid #313eeb;
-    border-radius: 8px;
-  }
-  
-.terminal-button:hover {
-    background-color: #313eeb;
-    color: white;
-}
-
-.buy{
-    border-color: green;
-    color: green;
-    width: 50%;
-}
-
-.buy:hover{
-    background-color: green;
-}
-
-.sell{
-    border-color: red;
-    color: red;
-    width: 50%;
-}
-
-.sell:hover{
-    background-color: red;
+.btn {
+  width: 50%;
 }

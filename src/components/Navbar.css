@@ -1,63 +1,57 @@
-body{
-    margin:0px;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-a :hover{
-    color:antiquewhite;
-    text-decoration: none;
-    
-}
-.Navbarnav-bar{
-    display:flex;
-    background-color:black;
+body {
+  margin: 0px;
 }
 
-.Navbarnav{
-    display:flex;
-    justify-content:flex-start;
-    width: 80%;
-    margin:10px;
-    padding:10px;
-
+a :hover {
+  color: antiquewhite;
+  text-decoration: none;
 }
-.Navbarnav-Item{
-    margin-left:12px;
-    color:aliceblue;
-}
-.Navbarnav-Link{
-    text-decoration:none;
-    
-}
-.Navbaractive{
-    color:antiquewhite;
+.Navbarnav-bar {
+  display: flex;
+  background-color: black;
 }
 
-.Navbarhead{
-    display:flex;
-    color:aliceblue;
-    font-family: sans-serif;
-    font-weight:bold;
-    font-size: 18px;
-    align-items:center;
-    padding-right: 15px;
-    border-right: 1px solid white;
-    border-radius: 2rem;
+.Navbarnav {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
 }
-.Navbarbtn{
-    display: flex;
-    align-self: flex-end;
-    color:green;
-    background-color: black;
-    border-color: green;
-    border-radius:1rem;
-    font-weight:bold;
-    font-size: large;
+.Navbarnav-Item {
+  margin-left: 12px;
+  color: aliceblue;
 }
-.Navbarnav-right{
-    display: flex;
-    margin:15px;
-    align-items:center;
+.Navbarnav-Link {
+  text-decoration: none;
+}
+.Navbaractive {
+  color: antiquewhite;
+}
+
+.Navbarhead {
+  display: flex;
+  color: aliceblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  align-items: center;
+  padding-right: 15px;
+  border-right: 1px solid white;
+  border-radius: 2rem;
+}
+.Navbarbtn {
+  display: flex;
+  align-self: flex-end;
+  color: green;
+  background-color: black;
+  border-color: green;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: large;
+}
+.Navbarnav-right {
+  display: flex;
+  margin: 15px;
+  align-items: center;
 }
